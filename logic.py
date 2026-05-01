@@ -61,8 +61,10 @@ class Logic(QMainWindow, Ui_MainWindow):
             for name, amount in items.items():
                 value = amount.text().strip()
 
-                if value.isdigit():
-                    quantity = int(value)
+                digits = ''.join(char for char in value if char.isdigit())
+
+                if digits != '':
+                    quantity = int(digits)
 
                     rows.append([
                         f"Table {tablenumber}",
@@ -87,7 +89,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         clears all the boxes on the menu
         '''
 
-        
+
 
         self.TunaBox.clear()
         self.MahiBox.clear()
