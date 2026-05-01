@@ -86,6 +86,9 @@ class Logic(QMainWindow, Ui_MainWindow):
         '''
         clears all the boxes on the menu
         '''
+
+        
+
         self.TunaBox.clear()
         self.MahiBox.clear()
         self.SalmonBox.clear()
